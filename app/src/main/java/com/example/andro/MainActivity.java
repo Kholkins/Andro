@@ -26,5 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToNewActivity (View view) {
         Intent intent = new Intent(this, LastActivity.class);
+        startActivity(intent);
     }
 }
