@@ -59,7 +59,7 @@
         tools:layout_editor_absoluteY="596dp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -94,7 +94,7 @@
         tools:layout_editor_absoluteY="506dp" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
