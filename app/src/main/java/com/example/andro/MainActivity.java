@@ -33,4 +33,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LastActivity.class);
         startActivity(intent);
     }
+
+    public void sentData (View view) {
+        Intent intent = new Intent(this, LastActivity.class);
+        startActivity(intent);
+    }
 }
