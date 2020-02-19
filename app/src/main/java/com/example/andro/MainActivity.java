@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("login", login.getText().toString());
         intent.putExtra("password", password.getText().toString());
         startActivity(intent);
+    }
 
+    public void OnShow (View view) {
+        Toast toast = new Toast(getApplicationContext());
     }
 }
