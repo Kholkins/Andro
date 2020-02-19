@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OnShow (View view) {
-        Toast toast = new Toast(getApplicationContext());
+        Toast toast = Toast.makeText(getApplicationContext(), "Yahoo", Toast.LENGTH_SHORT);
+        toast.show();
     }
 }

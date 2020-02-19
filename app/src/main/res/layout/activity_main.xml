@@ -109,6 +109,7 @@
         android:id="@+id/tost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="OnShow"
         android:text="Ask tost"
         app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toEndOf="parent"
