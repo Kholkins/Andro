@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void sentData (View view) {
         Intent intent = new Intent(this, LastActivity.class);
-        intent.putExtra("login", login.getText());
-        intent.putExtra("password", password.getText());
+        intent.putExtra("login", login.getText().toString());
+        intent.putExtra("password", password.getText()).toString();
         startActivity(intent);
 
     }
