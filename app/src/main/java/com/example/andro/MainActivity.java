@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText login;
     private EditText password;
     private TextView txtName;
+    private TextView txtLang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         login = (EditText) findViewById(R.id.login);
         password = (EditText) findViewById(R.id.password);
         txtName =(TextView) findViewById(R.id.txtName);
+        txtLang = (TextView) findViewById(R.id.txtLang);
     }
 
     public void sayHallo (View view) {
@@ -77,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
                     String name = data.getStringExtra("name");
                     txtName.setText("Hi, "+ name);
                     break;
+
+                case RequestCode.REQUEST_CODE_LANGUAGE:
+
             }
         } else {
             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();

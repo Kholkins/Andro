@@ -22,7 +22,7 @@ public class PresentedActivity extends AppCompatActivity {
     public void onSetName (View view) {
         Intent intent = new Intent();
         intent.putExtra("name", editName.getText().toString());
-        setResult(RESULT_OK);
+        setResult(RESULT_OK, intent);
         finish();
     }
 }
