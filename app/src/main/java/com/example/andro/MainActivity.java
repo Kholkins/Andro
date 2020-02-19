@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.andro.util.RequestCode;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,5 +50,21 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(getApplicationContext(), "Yahoo", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
+    }
+
+    public void onPresentations (View v ){
+        Intent intent;
+        switch (v.getId()){
+            case R.id.btnPres:
+                intent = new Intent(this, PresentedActivity.class);
+                startActivityForResult(intent, RequestCode.REQUEST_CODE_PRESENTED);
+                break;
+            case R.id.btnLan:
+                intent = new Intent(this, LastActivity.class);
+                startActivityForResult(intent, RequestCode.REQUEST_CODE_LANGUAGE);
+
+                break;
+        }
+
     }
 }
