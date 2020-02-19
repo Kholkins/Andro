@@ -1,5 +1,6 @@
 package com.example.andro;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private EditText login;
     private EditText password;
+    private TextView txtName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);
         login = (EditText) findViewById(R.id.login);
         password = (EditText) findViewById(R.id.password);
+        txtName =(TextView) findViewById(R.id.txtName);
     }
 
     public void sayHallo (View view) {
@@ -64,6 +67,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, RequestCode.REQUEST_CODE_LANGUAGE);
                 break;
         }
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (resultCode == RESULT_OK){
+            switch (requestCode){
+                case RequestCode.REQUEST_CODE_PRESENTED:
+                    String name = data.getStringExtra("name");
+                    txtName.setText("Hi, "+ name);
+                    break;
+            }
+        } else {
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+        }
     }
 }
