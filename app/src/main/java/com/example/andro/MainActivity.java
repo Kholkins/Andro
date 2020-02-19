@@ -81,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case RequestCode.REQUEST_CODE_LANGUAGE:
+                    String language = data.getStringExtra("Lang");
+                    txtLang.setText(language);
+                    break;
 
             }
         } else {
