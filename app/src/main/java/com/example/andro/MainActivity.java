@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnLan:
                 intent = new Intent(this, LastActivity.class);
                 startActivityForResult(intent, RequestCode.REQUEST_CODE_LANGUAGE);
-
                 break;
         }
 
