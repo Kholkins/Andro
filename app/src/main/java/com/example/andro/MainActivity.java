@@ -1,8 +1,10 @@
 package com.example.andro;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -84,10 +86,10 @@ public class MainActivity extends AppCompatActivity {
                     String language = data.getStringExtra("Lang");
                     txtLang.setText(language);
                     break;
-
             }
         } else {
             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
