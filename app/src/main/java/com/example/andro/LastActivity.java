@@ -37,6 +37,7 @@ public class LastActivity extends AppCompatActivity {
                 tvOut.setText("Нажата кнопка ОК");
             }
         };
+        btnOk.setOnClickListener(oclBtnOk);
     }
 
     public void onBack (View view) {
