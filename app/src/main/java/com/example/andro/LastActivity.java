@@ -10,12 +10,14 @@ import android.widget.TextView;
 
 import com.example.andro.util.Language;
 
-public class LastActivity extends AppCompatActivity {
+public class LastActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView txtLogin;
     private TextView txtPassword;
     private TextView tvOut;
     private Button btnOk;
+    private Button btnOkOk;
+    private Button btnCancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,13 @@ public class LastActivity extends AppCompatActivity {
             }
         };
         btnOk.setOnClickListener(oclBtnOk);
+
+        btnOkOk = (Button) findViewById(R.id.btnOkOk);
+        btnCancel = (Button) findViewById(R.id.btnCancel);
+
+        // присваиваем обработчик кнопкам
+        btnOkOk.setOnClickListener(this);
+        btnCancel.setOnClickListener(this);
     }
 
     public void onBack (View view) {
@@ -58,6 +67,20 @@ public class LastActivity extends AppCompatActivity {
                 intent.putExtra("Lang", Language.RUSSIAN.getLanguage());
                 setResult(RESULT_OK, intent);
                 finish();
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnOkOk:
+                // кнопка ОК
+                tvOut.setText("Нажата кнопка ОК");
+                break;
+            case R.id.btnCancel:
+                // кнопка Cancel
+                tvOut.setText("Нажата кнопка Cancel");
+                break;
         }
     }
 }
